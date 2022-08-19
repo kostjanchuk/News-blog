@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ block.super}} :: {{ title }}
+{% endblock title %}
+
+{% block sidebar %}
+
+{% include '_inc/_sidebar.html' %}
+
+{% endblock sidebar %}
+
+{% block content%}
+<h1>Email</h1>
+
+<form action="{% url 'send_message' %}" method="post"> {% csrf_token %}
+    {{ form.as_p }}
+     <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Send mail</button>
+    </div>
+</form>
+
+
+{% endblock content %}
