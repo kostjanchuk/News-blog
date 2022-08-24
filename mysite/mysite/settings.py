@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'captcha',
-    'news.apps.NewsConfig',
-    'favorites.apps.FavoritesConfig',
-    'users.apps.UsersConfig',
+    'news',
+    'favorites',
+    'users',
 ]
 
 MIDDLEWARE = [
