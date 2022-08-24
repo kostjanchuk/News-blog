@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class FavoriteNews(models.Model):
+    is_favorite = models.BooleanField(default=True)
