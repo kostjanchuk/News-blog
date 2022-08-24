@@ -8,7 +8,7 @@ from .models import News, Category
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'created_at', 'is_published', 'category', 'views', 'favorites', 'get_photo')
     list_display_links = ('id', 'title')
-    search_fields = ('title', 'content')
+    search_fields = ('title', 'content', 'category')
     list_editable = ('is_published','views')
     list_filter = ('category', 'is_published')
     fields = ('title', 'content',  'get_photo', 'photo', 'created_at', 'is_published', 'category', 'views')
