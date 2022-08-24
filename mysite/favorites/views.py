@@ -6,6 +6,7 @@ from django.views.generic import ListView
 from news.models import News
 
 
+
 class FavoritesList(ListView):
     model = News
     template_name = 'favorites/favorites-list.html'

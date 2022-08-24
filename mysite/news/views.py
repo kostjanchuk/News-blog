@@ -10,6 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 
 
+
 class HomeNews(MixinNews, ListView):
 
     def get_queryset(self):
@@ -56,6 +57,9 @@ class SendMessage(FormView):
         messages.error(self.request, 'Email sending error')
         return super(SendMessage, self).form_invalid(form)
 
+
+def some_functions(request):
+    return HttpResponse('Some function')
 
 # def index(request):
 #     context = {'news': News.objects.all(),
